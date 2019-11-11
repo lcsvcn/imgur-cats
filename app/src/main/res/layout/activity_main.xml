@@ -15,8 +15,7 @@
         <GridLayout
             android:id="@+id/gridCat"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:numColumns="auto_fit"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="visible">
 
@@ -27,6 +26,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/LinearLayoutMargin"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/catImg0"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/imageViewMargin"
+                    android:contentDescription="@string/img_description"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageView
                     android:id="@+id/catImg1"
@@ -47,18 +56,8 @@
                     android:contentDescription="@string/img_description"
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/avatars" />
-
                 <ImageView
                     android:id="@+id/catImg3"
-                    android:src="@mipmap/ic_launcher_round"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/imageViewMargin"
-                    android:contentDescription="@string/img_description"
-                    android:visibility="visible"
-                    tools:srcCompat="@tools:sample/avatars" />
-                <ImageView
-                    android:id="@+id/catImg100"
                     android:src="@mipmap/ic_launcher_round"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -106,6 +105,15 @@
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/avatars" />
 
+                <ImageView
+                    android:id="@+id/catImg7"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/imageViewMargin"
+                    android:contentDescription="@string/img_description"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/avatars" />
 
             </LinearLayout>
 
@@ -117,15 +125,6 @@
                 android:layout_margin="@dimen/LinearLayoutMargin"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/catImg7"
-                    android:src="@mipmap/ic_launcher_round"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/imageViewMargin"
-                    android:contentDescription="@string/img_description"
-                    android:visibility="visible"
-                    tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageView
                     android:id="@+id/catImg8"
@@ -147,17 +146,6 @@
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/avatars" />
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearCat4"
-                android:src="@mipmap/ic_launcher_round"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/LinearLayoutMargin"
-                android:orientation="horizontal">
-
                 <ImageView
                     android:id="@+id/catImg10"
                     android:src="@mipmap/ic_launcher_round"
@@ -178,8 +166,48 @@
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/avatars" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCat4"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/LinearLayoutMargin"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/catImg12"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/imageViewMargin"
+                    android:contentDescription="@string/img_description"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/catImg13"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/imageViewMargin"
+                    android:contentDescription="@string/img_description"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/catImg14"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/imageViewMargin"
+                    android:contentDescription="@string/img_description"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/catImg15"
                     android:src="@mipmap/ic_launcher_round"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -192,7 +220,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearCat13"
+                android:id="@+id/linearCat5"
                 android:src="@mipmap/ic_launcher_round"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -200,42 +228,14 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/catImg14"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/imageViewMargin"
-                    android:contentDescription="@string/img_description"
-                    android:visibility="visible"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <ImageView
-                    android:id="@+id/catImg15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/imageViewMargin"
-                    android:contentDescription="@string/img_description"
-                    android:visibility="visible"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <ImageView
                     android:id="@+id/catImg16"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/imageViewMargin"
                     android:contentDescription="@string/img_description"
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/avatars" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearCat5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/LinearLayoutMargin"
-                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/catImg17"
@@ -254,9 +254,9 @@
                     android:contentDescription="@string/img_description"
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/avatars" />
-
                 <ImageView
                     android:id="@+id/catImg19"
+                    android:src="@mipmap/ic_launcher_round"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/imageViewMargin"
@@ -265,7 +265,10 @@
                     tools:srcCompat="@tools:sample/avatars" />
 
 
+
             </LinearLayout>
+
+
         </GridLayout>
     </ScrollView>
 
