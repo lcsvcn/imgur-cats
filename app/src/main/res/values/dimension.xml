@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="imageViewMargin">5dp</dimen>
+    <dimen name="LinearLayoutMargin">10dp</dimen>
+</resources>
