@@ -3,4 +3,6 @@
 
     <dimen name="imageViewMargin">5dp</dimen>
     <dimen name="LinearLayoutMargin">10dp</dimen>
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
 </resources>
