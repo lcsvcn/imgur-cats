@@ -9,33 +9,39 @@ import java.io.IOException
 
 import com.squareup.picasso.Picasso
 import org.json.JSONObject
-
-
+import android.graphics.drawable.Drawable
+import java.io.InputStream
+import java.net.URL
 
 
 class MainActivity : AppCompatActivity() {
     private val client = OkHttpClient()
     private lateinit var responseJSON : JSONObject
-    private var fetchLinks : Array<String> = emptyArray()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        getImages("https://api.imgur.com/3/gallery/search/?q=cats")
+        
+
+        getCatImages("https://api.imgur.com/3/gallery/search/?q=cats")
     }
-
-    fun getImages(url: String) {
-
+    
+    // Handle Get Cat Images from Imgur
+    fun getCatImages(url: String) {
+        // Create the request for url
         val request = Request.Builder()
             .url(url)
             .addHeader("Authorization", "Client-ID 1ceddedc03a5d71")
             .build()
 
+        // Call method GET
         client.newCall(request).enqueue(object : Callback {
+            // Fail to get response
             override fun onFailure(call: Call, e: IOException) {
                 Log.d("DEV", "FALHOU, erro: " + e.toString() )
             }
 
+            // Success to get response
             override fun onResponse(call: Call, response: Response) {
                 Log.d("DEV", "SUCESSO")
                 handleSuccessResponse(response.body()!!.string())
@@ -43,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+
+    // Handle Success response from API
     fun handleSuccessResponse(json : String) {
         responseJSON =  JSONObject(json.trim())
         val data = responseJSON
@@ -57,8 +65,9 @@ class MainActivity : AppCompatActivity() {
                     .getJSONObject(0)
                     .getString("link")
 
+              // avoid send gif or mp4
               if(link.endsWith(".jpg"))
-                    //setImages(link)
+                    showCatImages(link)
 
             } catch(e : Exception) {
                 Log.d("DEV", "OPS $e")
@@ -66,16 +75,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // TODO PRINT IMAGES WITHOUT ERROR AND GENERATE IMAGEVIEW
-    fun setImages(link : String) {
+    // Handle Show Cat Images
+    // Improve
+    fun showCatImages(link : String) {
         var imageView1 = findViewById<ImageView>(R.id.catImg1)
 
-        val picasso = Picasso.get()
-        Log.d("DEV", link)
-
-        picasso.load(link)
-            .resize(250, 250)
-            .into(imageView1)
+        try {
+            val myUrl = URL(link)
+            val inputStream = myUrl.getContent() as InputStream
+            val drawable = Drawable.createFromStream(inputStream, null)
+            imageView1.setImageDrawable(drawable)
+        } catch(e : Exception) {
+            Log.d("DEV", "OPS $e")
+        }
 
     }
 
